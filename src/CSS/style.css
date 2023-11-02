@@ -1,0 +1,126 @@
+:root {
+    --robin-color1: #FADB71;
+    --robin-color2: #E23934;
+    --robin-color3: #18B26A;
+    --batman-color1: #1561AD;
+    --batman-color2: #0c4379;
+    --batman-color3: #91A3B1;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    background-color: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+@font-face {
+    font-family: "Batman";
+    src: url('../batmfa__.ttf') format('truetype'), url('../batmfo__.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 150px auto 50px;
+    background-color: var(--robin-color2);
+}
+
+h1 {
+    font-family: 'Batman', 'Poppins', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+body.modoescuro {
+    background-color: var(--batman-color3);
+    color: black;
+}
+
+.modoescuro .cartao-pokemon {
+    background-color: var(--batman-color1);
+}
+
+.modoescuro .cartao-pokemon:hover {
+    background-color: var(--batman-color2);
+}
+
+header {
+    background-color: var(--robin-color1);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    padding: 25px;
+    z-index: 1;
+    box-shadow: 0 0 10px black;
+}
+
+header img {
+    width: 50px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+header #botao-alterar {
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .alterar:hover,
+main .cartao-pokemon:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+main .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+main .cartao-pokemon {
+    background-color: var(--robin-color3);
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 10px black;
+}
+
+main .cartao-pokemon:hover {
+    background-color: #129256;
+}
+
+main .cartao-pokemon .informacoes {
+    font-size: 20px;
+    width: 300px;
+    display: flex;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: var(--robin-color1);
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+main .cartao-pokemon .png {
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+}
